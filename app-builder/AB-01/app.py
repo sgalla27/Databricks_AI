@@ -5,6 +5,22 @@ from sqlalchemy import text
 import pandas as pd
 import streamlit as st
 
+
+st.set_page_config(
+    page_title="Policy Search",
+    page_icon="📄",
+    layout="wide"
+)
+
+st.markdown("""
+<style>
+.stButton > button {
+    background-color: #0078D4;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
+
 load_dotenv()
 
 user = os.getenv("PGUSER")
